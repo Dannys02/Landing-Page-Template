@@ -2,28 +2,28 @@
    DESIGN SYSTEM & CSS VARIABLES
    ========================================================================== */
 :root {
-    /* Palette: Adem & Elegan */
-    --bg-warm: #F9F8F3;        /* Warm Cream / Ivory */
-    --surface-white: #FFFFFF;   /* Off-White */
-    --text-dark: #2C2623;       /* Deep Roast Charcoal */
-    --text-muted: #6B6560;      /* Soft Warm Gray */
-    --accent-sage: #4A6B5D;     /* Sage / Forest Green */
-    --accent-sage-light: #EBF1EE;
-    --accent-latte: #A67C52;    /* Warm Latte */
-    --accent-gold: #C5A059;     /* Muted Gold */
-    --accent-gold-dark: #A48141;
+    /* Palette: Premium Gentlemen Barbershop */
+    --bg-warm: #121417;        /* Matte Dark Charcoal / Onyx */
+    --surface-dark: #1A1D23;    /* Deep Gunmetal Card Surface */
+    --surface-white: #22262F;   /* Dark Surface Accent */
+    --text-dark: #F5F5F7;       /* Off-White / Crisp Light */
+    --text-muted: #9BA3AF;      /* Soft Metallic Grey */
+    --accent-gold: #D4AF37;     /* Classic Vintage Gold / Brass */
+    --accent-gold-dark: #AA8725;/* Deep Amber Gold */
+    --accent-burgundy: #800020; /* Barber Red / Mahogany */
+    --accent-leather: #C5A059;  /* Muted Warm Leather */
 
     /* Typography */
-    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-heading: 'Cinzel', 'Playfair Display', Georgia, serif;
     --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 
     /* Spacing & Utilities */
     --container-width: 1200px;
-    --radius-sm: 8px;
-    --radius-md: 16px;
-    --radius-lg: 24px;
-    --shadow-subtle: 0 10px 30px rgba(44, 38, 35, 0.05);
-    --shadow-hover: 0 20px 40px rgba(44, 38, 35, 0.1);
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.35);
+    --shadow-hover: 0 20px 40px rgba(212, 175, 55, 0.15);
     --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -74,11 +74,12 @@ ul {
 }
 
 /* TYPOGRAPHY COMPONENTS */
+/* TYPOGRAPHY COMPONENTS */
 .section-subtitle {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: var(--accent-sage);
+    color: var(--accent-gold);
     font-weight: 700;
     margin-bottom: 12px;
     display: block;
@@ -90,6 +91,7 @@ ul {
     color: var(--text-dark);
     line-height: 1.25;
     margin-bottom: 20px;
+    letter-spacing: 0.5px;
 }
 
 .section-desc {
@@ -113,10 +115,11 @@ ul {
     align-items: center;
     justify-content: center;
     padding: 14px 32px;
-    border-radius: 50px;
-    font-weight: 600;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
     font-size: 0.95rem;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     cursor: pointer;
     transition: var(--transition-smooth);
     border: 2px solid transparent;
@@ -124,37 +127,39 @@ ul {
 }
 
 .btn-primary {
-    background-color: var(--accent-sage);
-    color: var(--surface-white);
-    box-shadow: 0 8px 20px rgba(74, 107, 93, 0.25);
+    background-color: var(--accent-gold);
+    color: #121417;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
 }
 
 .btn-primary:hover {
-    background-color: #3B574B;
+    background-color: var(--accent-gold-dark);
+    color: #FFFFFF;
     transform: translateY(-2px);
-    box-shadow: 0 12px 25px rgba(74, 107, 93, 0.35);
+    box-shadow: 0 12px 25px rgba(212, 175, 55, 0.35);
 }
 
 .btn-gold {
     background-color: var(--accent-gold);
-    color: var(--surface-white);
-    box-shadow: 0 8px 20px rgba(197, 160, 89, 0.25);
+    color: #121417;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
 }
 
 .btn-gold:hover {
     background-color: var(--accent-gold-dark);
+    color: #FFFFFF;
     transform: translateY(-2px);
 }
 
 .btn-outline {
     background-color: transparent;
-    border-color: var(--accent-sage);
-    color: var(--accent-sage);
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
 }
 
 .btn-outline:hover {
-    background-color: var(--accent-sage);
-    color: var(--surface-white);
+    background-color: var(--accent-gold);
+    color: #121417;
     transform: translateY(-2px);
 }
 
@@ -172,10 +177,11 @@ ul {
 }
 
 .header.scrolled {
-    background-color: rgba(249, 248, 243, 0.92);
+    background-color: rgba(18, 20, 23, 0.94);
     backdrop-filter: blur(12px);
     padding: 16px 0;
     box-shadow: var(--shadow-subtle);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
 }
 
 .nav-wrapper {
@@ -192,6 +198,7 @@ ul {
     display: flex;
     align-items: center;
     gap: 8px;
+    letter-spacing: 1px;
 }
 
 .logo span {
@@ -209,6 +216,7 @@ ul {
     font-size: 0.95rem;
     color: var(--text-dark);
     position: relative;
+    letter-spacing: 0.5px;
 }
 
 .nav-link::after {
@@ -260,7 +268,7 @@ ul {
     display: flex;
     align-items: center;
     padding-top: 100px;
-    background: linear-gradient(135deg, rgba(249, 248, 243, 0.94) 0%, rgba(249, 248, 243, 0.85) 100%),
+    background: linear-gradient(135deg, rgba(18, 20, 23, 0.92) 0%, rgba(18, 20, 23, 0.82) 100%),
                 url('hero_bg_1784818295578.jpg') center/cover no-repeat;
 }
 
@@ -272,14 +280,15 @@ ul {
 }
 
 .hero-tagline {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 4px;
-    color: var(--accent-sage);
+    letter-spacing: 3px;
+    color: var(--accent-gold);
     font-weight: 700;
     margin-bottom: 16px;
     display: inline-block;
-    background-color: var(--accent-sage-light);
+    background-color: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.3);
     padding: 6px 16px;
     border-radius: 30px;
 }
@@ -293,7 +302,7 @@ ul {
 }
 
 .hero-title span {
-    color: var(--accent-latte);
+    color: var(--accent-gold);
     font-style: italic;
 }
 
@@ -316,9 +325,10 @@ ul {
 }
 
 .hero-card {
-    background-color: var(--surface-white);
+    background-color: var(--surface-dark);
     padding: 12px;
     border-radius: var(--radius-lg);
+    border: 1px solid rgba(212, 175, 55, 0.2);
     box-shadow: var(--shadow-hover);
     transform: rotate(-2deg);
     transition: var(--transition-smooth);
@@ -338,7 +348,8 @@ ul {
     position: absolute;
     bottom: -20px;
     left: -20px;
-    background: var(--surface-white);
+    background: var(--surface-dark);
+    border: 1px solid rgba(212, 175, 55, 0.3);
     padding: 16px 24px;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-hover);
@@ -350,12 +361,12 @@ ul {
 .hero-badge-icon {
     width: 44px;
     height: 44px;
-    background-color: var(--accent-sage-light);
+    background-color: rgba(212, 175, 55, 0.15);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--accent-sage);
+    color: var(--accent-gold);
     font-size: 1.2rem;
 }
 
@@ -384,6 +395,7 @@ ul {
     position: relative;
     border-radius: var(--radius-lg);
     overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.2);
     box-shadow: var(--shadow-subtle);
 }
 
@@ -404,15 +416,16 @@ ul {
 }
 
 .feature-card {
-    background-color: var(--surface-white);
+    background-color: var(--surface-dark);
     padding: 24px;
     border-radius: var(--radius-md);
-    border: 1px solid rgba(74, 107, 93, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.15);
     transition: var(--transition-smooth);
 }
 
 .feature-card:hover {
-    box-shadow: var(--shadow-subtle);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--accent-gold);
     transform: translateY(-4px);
 }
 
@@ -438,7 +451,9 @@ ul {
    4. HIGHLIGHT MENU SECTION
    ========================================================================== */
 .menu-section {
-    background-color: var(--surface-white);
+    background-color: var(--surface-dark);
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
 }
 
 .menu-tabs {
@@ -451,7 +466,7 @@ ul {
 
 .tab-btn {
     background: var(--bg-warm);
-    border: 1px solid rgba(44, 38, 35, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.2);
     padding: 10px 24px;
     border-radius: 30px;
     font-family: var(--font-body);
@@ -464,9 +479,9 @@ ul {
 
 .tab-btn.active,
 .tab-btn:hover {
-    background-color: var(--accent-sage);
-    color: var(--surface-white);
-    border-color: var(--accent-sage);
+    background-color: var(--accent-gold);
+    color: #121417;
+    border-color: var(--accent-gold);
 }
 
 .menu-grid {
@@ -480,13 +495,14 @@ ul {
     border-radius: var(--radius-md);
     overflow: hidden;
     transition: var(--transition-smooth);
-    border: 1px solid rgba(44, 38, 35, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.15);
     display: flex;
     flex-direction: column;
 }
 
 .menu-card:hover {
     transform: translateY(-6px);
+    border-color: var(--accent-gold);
     box-shadow: var(--shadow-hover);
 }
 
@@ -512,7 +528,7 @@ ul {
     top: 12px;
     right: 12px;
     background-color: var(--accent-gold);
-    color: var(--surface-white);
+    color: #121417;
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -544,7 +560,7 @@ ul {
 
 .menu-item-price {
     font-weight: 700;
-    color: var(--accent-sage);
+    color: var(--accent-gold);
     font-size: 1.1rem;
 }
 
@@ -560,8 +576,8 @@ ul {
     padding: 10px;
     border-radius: var(--radius-sm);
     background-color: transparent;
-    border: 1px solid var(--accent-sage);
-    color: var(--accent-sage);
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
     font-weight: 600;
     font-size: 0.85rem;
     cursor: pointer;
@@ -570,8 +586,8 @@ ul {
 }
 
 .menu-card-btn:hover {
-    background-color: var(--accent-sage);
-    color: var(--surface-white);
+    background-color: var(--accent-gold);
+    color: #121417;
 }
 
 /* ==========================================================================
@@ -588,6 +604,7 @@ ul {
     border-radius: var(--radius-md);
     overflow: hidden;
     height: 280px;
+    border: 1px solid rgba(212, 175, 55, 0.15);
     box-shadow: var(--shadow-subtle);
 }
 
@@ -601,7 +618,7 @@ ul {
 .gallery-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(44, 38, 35, 0.7) 0%, transparent 60%);
+    background: linear-gradient(to top, rgba(18, 20, 23, 0.9) 0%, transparent 60%);
     display: flex;
     align-items: flex-end;
     padding: 20px;
@@ -610,7 +627,7 @@ ul {
 }
 
 .gallery-title {
-    color: var(--surface-white);
+    color: var(--text-dark);
     font-family: var(--font-heading);
     font-size: 1.25rem;
     transform: translateY(10px);
@@ -633,7 +650,9 @@ ul {
    6. SOCIAL PROOF / REVIEWS
    ========================================================================== */
 .reviews-section {
-    background-color: var(--accent-sage-light);
+    background-color: var(--surface-dark);
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
 }
 
 .reviews-grid {
@@ -643,9 +662,10 @@ ul {
 }
 
 .review-card {
-    background-color: var(--surface-white);
+    background-color: var(--bg-warm);
     padding: 32px;
     border-radius: var(--radius-md);
+    border: 1px solid rgba(212, 175, 55, 0.15);
     box-shadow: var(--shadow-subtle);
     position: relative;
     display: flex;
@@ -677,8 +697,8 @@ ul {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color: var(--accent-latte);
-    color: var(--surface-white);
+    background-color: var(--accent-gold);
+    color: #121417;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -708,11 +728,11 @@ ul {
 }
 
 .info-card {
-    background-color: var(--surface-white);
+    background-color: var(--surface-dark);
     padding: 36px;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-subtle);
-    border: 1px solid rgba(44, 38, 35, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .info-block {
@@ -727,7 +747,7 @@ ul {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: var(--accent-sage);
+    color: var(--accent-gold);
     font-weight: 700;
     margin-bottom: 8px;
     display: flex;
@@ -777,9 +797,10 @@ ul {
    8. FOOTER
    ========================================================================== */
 .footer {
-    background-color: var(--text-dark);
-    color: rgba(255, 255, 255, 0.8);
+    background-color: #0B0C0E;
+    color: #E2E8F0;
     padding: 70px 0 30px;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .footer-grid {
@@ -790,37 +811,40 @@ ul {
 }
 
 .footer-brand .logo {
-    color: var(--surface-white);
+    color: #FFFFFF;
     margin-bottom: 16px;
 }
 
 .footer-desc {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.92rem;
+    color: #94A3B8;
     max-width: 320px;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 .footer-title {
     font-family: var(--font-heading);
-    color: var(--surface-white);
+    color: var(--accent-gold);
     font-size: 1.1rem;
     margin-bottom: 20px;
+    letter-spacing: 0.5px;
 }
 
 .footer-links {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 .footer-links a {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.92rem;
+    color: #CBD5E1;
+    transition: var(--transition-smooth);
 }
 
 .footer-links a:hover {
     color: var(--accent-gold);
+    transform: translateX(4px);
 }
 
 .social-icons {
@@ -830,20 +854,24 @@ ul {
 }
 
 .social-btn {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--surface-white);
+    color: #FFFFFF;
+    font-weight: 700;
     transition: var(--transition-smooth);
 }
 
 .social-btn:hover {
     background-color: var(--accent-gold);
-    transform: translateY(-2px);
+    color: #121417;
+    border-color: var(--accent-gold);
+    transform: translateY(-3px);
 }
 
 .footer-bottom {
@@ -852,8 +880,8 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.88rem;
+    color: #64748B;
 }
 
 /* FLOATING WHATSAPP BUTTON */
