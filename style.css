@@ -2,28 +2,28 @@
    DESIGN SYSTEM & CSS VARIABLES
    ========================================================================== */
 :root {
-    /* Palette: Premium Gentlemen Barbershop */
-    --bg-warm: #121417;        /* Matte Dark Charcoal / Onyx */
-    --surface-dark: #1A1D23;    /* Deep Gunmetal Card Surface */
-    --surface-white: #22262F;   /* Dark Surface Accent */
-    --text-dark: #F5F5F7;       /* Off-White / Crisp Light */
-    --text-muted: #9BA3AF;      /* Soft Metallic Grey */
-    --accent-gold: #D4AF37;     /* Classic Vintage Gold / Brass */
-    --accent-gold-dark: #AA8725;/* Deep Amber Gold */
-    --accent-burgundy: #800020; /* Barber Red / Mahogany */
-    --accent-leather: #C5A059;  /* Muted Warm Leather */
+    /* Palette: Premium Skincare & Beauty Clinic */
+    --bg-warm: #FAF6F0;        /* Soft Warm Cream / Warm Alabaster */
+    --surface-dark: #FFFFFF;    /* Pure Pearl White Card Surface */
+    --surface-white: #F3EAE1;   /* Soft Rose/Beige Accent */
+    --text-dark: #2D2424;       /* Deep Rosewood / Charcoal */
+    --text-muted: #7A6F6D;      /* Soft Taupe Grey */
+    --accent-gold: #D4A373;     /* Warm Rose Gold / Soft Amber */
+    --accent-gold-dark: #BC8A5F;/* Deep Rose Gold */
+    --accent-burgundy: #E8D8CE; /* Blush Rose Accent */
+    --accent-leather: #8A9A86;  /* Soft Botanical Sage Green */
 
     /* Typography */
-    --font-heading: 'Cinzel', 'Playfair Display', Georgia, serif;
+    --font-heading: 'Playfair Display', 'Cinzel', Georgia, serif;
     --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 
     /* Spacing & Utilities */
     --container-width: 1200px;
-    --radius-sm: 6px;
-    --radius-md: 12px;
-    --radius-lg: 20px;
-    --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.35);
-    --shadow-hover: 0 20px 40px rgba(212, 175, 55, 0.15);
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --shadow-subtle: 0 10px 30px rgba(188, 138, 95, 0.08);
+    --shadow-hover: 0 20px 40px rgba(188, 138, 95, 0.18);
     --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -177,11 +177,11 @@ ul {
 }
 
 .header.scrolled {
-    background-color: rgba(18, 20, 23, 0.94);
+    background-color: rgba(250, 246, 240, 0.95);
     backdrop-filter: blur(12px);
     padding: 16px 0;
     box-shadow: var(--shadow-subtle);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    border-bottom: 1px solid rgba(212, 163, 115, 0.2);
 }
 
 .nav-wrapper {
@@ -268,7 +268,7 @@ ul {
     display: flex;
     align-items: center;
     padding-top: 100px;
-    background: linear-gradient(135deg, rgba(18, 20, 23, 0.92) 0%, rgba(18, 20, 23, 0.82) 100%),
+    background: linear-gradient(135deg, rgba(250, 246, 240, 0.94) 0%, rgba(243, 234, 225, 0.88) 100%),
                 url('img/room.jpeg') center/cover no-repeat;
 }
 
@@ -798,10 +798,10 @@ ul {
    8. FOOTER
    ========================================================================== */
 .footer {
-    background-color: #0B0C0E;
-    color: #E2E8F0;
+    background-color: #241E1E;
+    color: #E2D8D0;
     padding: 70px 0 30px;
-    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    border-top: 1px solid rgba(212, 163, 115, 0.2);
 }
 
 .footer-grid {
@@ -818,7 +818,7 @@ ul {
 
 .footer-desc {
     font-size: 0.92rem;
-    color: #94A3B8;
+    color: #B3A59E;
     max-width: 320px;
     line-height: 1.65;
 }
