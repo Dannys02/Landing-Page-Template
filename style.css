@@ -628,7 +628,7 @@ ul {
 }
 
 .gallery-title {
-    color: var(--text-dark);
+    color: var(--surface-white);
     font-family: var(--font-heading);
     font-size: 1.25rem;
     transform: translateY(10px);
