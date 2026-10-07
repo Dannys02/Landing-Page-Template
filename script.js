@@ -1,12 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    /* 1. Header Scroll Shadow Effect */
+    /* 1. Header Scroll Effect */
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
+        header.classList.toggle('scrolled', window.scrollY > 50);
     });
 
     /* 2. Mobile Hamburger Menu Toggle */
@@ -28,22 +24,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* 3. Filterable Menu Category Tabs */
     const tabBtns = document.querySelectorAll('.tab-btn');
-    const menuCards = document.querySelectorAll('.menu-card');
+    const menuItems = document.querySelectorAll('.menu-item');
 
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Update active button state
             tabBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
             const filterValue = btn.getAttribute('data-filter');
 
-            menuCards.forEach(card => {
-                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
+            menuItems.forEach(item => {
+                const match = filterValue === 'all' || item.getAttribute('data-category') === filterValue;
+                item.classList.toggle('hidden', !match);
             });
         });
     });
@@ -59,12 +51,24 @@ document.addEventListener('DOMContentLoaded', () => {
             const navItem = document.querySelector(`.nav-links a[href*=${sectionId}]`);
 
             if (navItem) {
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    navItem.classList.add('active');
-                } else {
-                    navItem.classList.remove('active');
-                }
+                navItem.classList.toggle('active', scrollY > sectionTop && scrollY <= sectionTop + sectionHeight);
             }
         });
     });
+
+    /* 5. Reveal on Scroll */
+    const revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        revealEls.forEach(el => observer.observe(el));
+    } else {
+        revealEls.forEach(el => el.classList.add('visible'));
+    }
 });
